@@ -3,6 +3,9 @@ const path = require('path');
 const express = require('express');
 const config = require('../config');
 const routes = require('./routes/index');
+const open = require('open');
+
+
 
 // set up express
 const app = express();
@@ -20,8 +23,9 @@ app.use(express.json());
 app.use(routes());
 
 // init the server
-app.listen(app.get('PORT'), () => {
+app.listen(app.get('PORT'), async () => {
      console.log('Server is Running in Port ' + app.get('PORT'));
+     // this is for to open the page with a tables 
+     // await open('http://localhost:5000/');
 });
-
 
