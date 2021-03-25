@@ -21,11 +21,10 @@ module.exports = function generateHTML(data) {
      <body>
           <div class="content">
                <div class="row border vh-100">
-                    <div class="col-12 d-flex justify-content-center">
-                         <form action="/upload" method="post" enctype="multipart/form-data" id="form">
-                              <input type="file" name="avatar" id='input-upload' />
-                              <button>Upload</button>
-                         </form>
+                    <div class="col-12 mt-3">
+                         <h1 class="text-center" style="color: dodgerblue;">
+                         🔥👌 Allready 👍🔥
+                         </h1>
                     </div>
                     <div class="col-12  d-flex justify-content-center">
      
@@ -48,7 +47,7 @@ function generateATable(data) {
      const questionKey = Object.keys(data);
      const thead_tr_0 = `
      <tr>
-     <th colspan="4" class="text-center">${questionKey}</th>
+     <th colspan="5" class="text-center">${questionKey}</th>
      <tr/>
      `;
      const thead_tr_1 = `
@@ -87,7 +86,7 @@ function generateATable(data) {
      })
      tbody += `<tbody>`;
      const table = `
-          <table class = "table table-stripped border my-3">
+          <table class = "table table-success table-dark border my-5">
                ${thead} \n ${tbody}
           </table>
      `;
