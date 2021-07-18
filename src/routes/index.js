@@ -8,14 +8,13 @@ const upload = require('../logic/multer');
 const generateHTML = require('../logic/generateHtml');
 
 module.exports = () => {
-
+     
      router.post('/upload', upload.single('avatar'), (res, req) => {
           readFile(res.file.path, async (data) => {
                const dataAPI = await getAll(data);
                const marcado = generateHTML(dataAPI);
                req.send(marcado);
           });
-
      });
      return router;
 }
